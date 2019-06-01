@@ -29,13 +29,11 @@ import AmortizationTable from '../AmortizationTable';
         const totalPayments = term * 12;
         const monthlyMortgagePayment = calculateMontlhyMortgagePayment(principal, totalPayments, interestRate);
         dispatch(setMonthlyMortgagePayment(monthlyMortgagePayment));
-    }, [interestRate, principal, term]);
-    
-    useEffect(() => {
+        
         const values = amort(principal, interestRate, term);
         dispatch(setAmortizationData(values));
     }, [interestRate, principal, term]);
-
+    
     const onPrincipalChange = useCallback((e) => {
         dispatch(setPrincipal(e.currentTarget.value));
      }, []);

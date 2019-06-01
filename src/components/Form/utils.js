@@ -28,7 +28,7 @@ const calculateMontlhyMortgagePayment = (startingLoanAmount, totalPayments, inte
     return startingLoanAmount * interestRatePerMonth * (Math.pow(1 + interestRatePerMonth, totalPayments)) / (Math.pow(1 + interestRatePerMonth, totalPayments) - 1);
 };
 
-const displayValue = (number) => parseInt(number, 10).toFixed(2);
+const displayValue = (number) => `$${parseInt(number, 10).toFixed(2)}`;
 
 export {
     amort,
