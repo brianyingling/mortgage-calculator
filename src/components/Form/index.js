@@ -54,7 +54,7 @@ import AmortizationTable from '../AmortizationTable';
             <Form />
             <AmortizationTable />
         </Context.Provider>
-    )
+    );
 };
 
  export default FormContainer;
